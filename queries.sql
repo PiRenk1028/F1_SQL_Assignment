@@ -1,0 +1,4 @@
+USE F1;
+
+SELECT *
+FROM F1;

@@ -9,18 +9,17 @@ Create Table Racers(
     Name VARCHAR(30),
     Birthday DATE,
     Team_ID SMALLINT,
-    Car_ID SMALLINT,
     Total_Points DEC,
     Start_Date DATE,
     Contract_End DATE,
     Intragram_following BIGINT,
-    FOREIGN KEY (Car_ID) REFERENCES Cars (Car_ID) ON DELETE SET NULL,
     FOREIGN KEY (Team_ID) REFERENCES Teams (Team_ID) ON DELETE SET NULL
     );
     
 Create Table Teams(
     Team_ID SMALLINT PRIMARY KEY,
     Team_Name VARCHAR(50),
+    Car_ID SMALLINT,
     Racer_1 SMALLINT ,
     Racer_2 SMALLINT,
     Total_Championships SMALLINT,
@@ -30,6 +29,7 @@ Create Table Teams(
     Sponsor_3 INT,
     Sponsor_4 INT,
     Sponsor_5 INT,
+    FOREIGN KEY (Car_ID) REFERENCES Cars (Car_ID) ON DELETE SET NULL,
     FOREIGN KEY (Racer_1) REFERENCES Racers (Race_Number) ON DELETE SET NULL,
     FOREIGN KEY (Racer_2) REFERENCES Racers (Race_Number) ON DELETE SET NULL,
     FOREIGN KEY (Sponsor_1) REFERENCES Sponsors (Sponsor_ID) ON DELETE SET NULL,
@@ -40,20 +40,20 @@ Create Table Teams(
     );
     
 CREATE TABLE Cars(
-	  Car_ID SMALLINT PRIMARY KEY,
+    Car_ID SMALLINT PRIMARY KEY,
     Team_ID SMALLINT,
-	  Engine_Name VARCHAR(50) NOT NULL,
-    Chassis_Name VARCHAR(50) NOT NULL,
-	  Fuel_Type VARCHAR(50) NOT NULL,
+    Engine_Name VARCHAR(50) NOT NULL,
+    Chassis_Name VARCHAR(50) NOT NULL, 
+    Fuel_Type VARCHAR(50) NOT NULL,
     FOREIGN KEY (TeamID) REFERENCES Teams (Team_ID) ON DELETE SET NULL
 );
 
 CREATE TABLE Finances(
-	  Team_ID SMALLINT NOT NULL,
+    Team_ID SMALLINT NOT NULL,
     Budget INT,
     Spending INT,
-	  CFO VARCHAR(50),
-  	Revenue INT,
+    CFO VARCHAR(50),
+    Revenue INT,
     FOREIGN KEY (Team_ID) REFERENCES Teams (Team_ID) ON DELETE CASCADE
 );
 

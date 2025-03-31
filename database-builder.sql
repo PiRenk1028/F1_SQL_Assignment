@@ -42,8 +42,8 @@ Create Table Teams(
 CREATE TABLE Cars(
     Car_ID SMALLINT PRIMARY KEY AUTO_INCREMENT,
     Team_ID SMALLINT,
+    Car_Name VARCHAR(50) NOT NULL,
     Engine_Name VARCHAR(50) NOT NULL,
-    Chassis_Name VARCHAR(50) NOT NULL, 
     Fuel_Type VARCHAR(50) NOT NULL,
     FOREIGN KEY (TeamID) REFERENCES Teams (Team_ID) ON DELETE SET NULL
 );
@@ -96,6 +96,18 @@ Values
 (10, "Atlassian Williams Racing", NULL, 23, 55, 9, 4300000, NULL, NULL, NULL, NULL, NULL)
 ;
 
-
+INSERT INTO Cars (Team_ID,Car_Name,Engine_Name,Fuel_Type)
+VALUES
+	(1,"Alpine A525","Renault E-Tech RE25","Eni"),
+	(2,"AMR25","Renault E-Tech RE25","Eni"),
+    (3,"Alpine A525","Renault E-Tech RE25","Eni"),
+    (4,"Alpine A525","Renault E-Tech RE25","Eni"),
+    (5,"Alpine A525","Renault E-Tech RE25","Eni"),
+    (6,"Alpine A525","Renault E-Tech RE25","Eni"),
+    (7,"Alpine A525","Renault E-Tech RE25","Eni"),
+    (8,"Alpine A525","Renault E-Tech RE25","Eni"),
+    (9,"Alpine A525","Renault E-Tech RE25","Eni"),
+    (10,"Alpine A525","Renault E-Tech RE25","Eni"),
+;
 
 

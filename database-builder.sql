@@ -40,7 +40,7 @@ Create Table Teams(
     );
     
 CREATE TABLE Cars(
-    Car_ID SMALLINT PRIMARY KEY,
+    Car_ID SMALLINT PRIMARY KEY AUTO_INCREMENT,
     Team_ID SMALLINT,
     Engine_Name VARCHAR(50) NOT NULL,
     Chassis_Name VARCHAR(50) NOT NULL, 

@@ -4,7 +4,7 @@ CREATE DATABASE F1;
 USE F1;
 
 -- Create tables
-Create Table Racers(
+Create Table Drivers(
     Race_Number SMALLINT PRIMARY KEY,
     Name VARCHAR(30),
     Birthday DATE,
@@ -20,8 +20,8 @@ Create Table Teams(
     Team_ID SMALLINT PRIMARY KEY,
     Team_Name VARCHAR(50),
     Car_ID SMALLINT,
-    Racer_1 SMALLINT ,
-    Racer_2 SMALLINT,
+    Driver_1 SMALLINT ,
+    Driver_2 SMALLINT,
     Total_Championships SMALLINT,
     Intragram_following INT,
     Sponsor_1 INT,
@@ -30,8 +30,8 @@ Create Table Teams(
     Sponsor_4 INT,
     Sponsor_5 INT,
     FOREIGN KEY (Car_ID) REFERENCES Cars (Car_ID) ON DELETE SET NULL,
-    FOREIGN KEY (Racer_1) REFERENCES Racers (Race_Number) ON DELETE SET NULL,
-    FOREIGN KEY (Racer_2) REFERENCES Racers (Race_Number) ON DELETE SET NULL,
+    FOREIGN KEY (Driver_1) REFERENCES Racers (Race_Number) ON DELETE SET NULL,
+    FOREIGN KEY (Driver_2) REFERENCES Racers (Race_Number) ON DELETE SET NULL,
     FOREIGN KEY (Sponsor_1) REFERENCES Sponsors (Sponsor_ID) ON DELETE SET NULL,
     FOREIGN KEY (Sponsor_2) REFERENCES Sponsors (Sponsor_ID) ON DELETE SET NULL,
     FOREIGN KEY (Sponsor_3) REFERENCES Sponsors (Sponsor_ID) ON DELETE SET NULL,
@@ -82,7 +82,7 @@ Values
 (55, "Carlos Sainz", '1994-07-01', 10, 1273.5, '2015-03-15', '2027-01-01', 11200000)
 ;   
 
-INSERT INTO Teams (Team_ID, Team_Name, Car_ID, Racer_1, Racer_2, Total_Championships, Intragram_following, Sponsor_1, Sponsor_2, Sponsor_3, Sponsor_4, Sponsor_5 )
+INSERT INTO Teams (Team_ID, Team_Name, Car_ID, Driver_1, Driver_2, Total_Championships, Intragram_following, Sponsor_1, Sponsor_2, Sponsor_3, Sponsor_4, Sponsor_5 )
 Values
 (1, "BWT Alpine Formula One Team", NULL, 10, 7, 0, 4200000, NULL, NULL, NULL, NULL, NULL),
 (2, "Aston Martin Aramco Formula One Team", NULL, 18, 14, 0, 4800000, NULL, NULL, NULL, NULL, NULL),

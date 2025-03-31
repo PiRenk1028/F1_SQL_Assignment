@@ -1,9 +1,9 @@
---Create database
+-- Create database
 CREATE DATABASE F1;
 
 USE F1;
 
---Create tables
+-- Create tables
 Create Table Racers(
     Race_Number SMALLINT PRIMARY KEY,
     Name VARCHAR(30),
@@ -38,8 +38,26 @@ Create Table Teams(
     FOREIGN KEY (Sponsor_4) REFERENCES Sponsors (Sponsor_ID) ON DELETE SET NULL,
     FOREIGN KEY (Sponsor_5) REFERENCES Sponsors (Sponsor_ID) ON DELETE SET NULL
     );
+    
+CREATE TABLE Cars(
+	  Car_ID SMALLINT PRIMARY KEY,
+    Team_ID SMALLINT,
+	  Engine_Name VARCHAR(50) NOT NULL,
+    Chassis_Name VARCHAR(50) NOT NULL,
+	  Fuel_Type VARCHAR(50) NOT NULL,
+    FOREIGN KEY (TeamID) REFERENCES Teams (Team_ID) ON DELETE SET NULL
+);
 
---Insert data into tables
+CREATE TABLE Finances(
+	  Team_ID SMALLINT NOT NULL,
+    Budget INT,
+    Spending INT,
+	  CFO VARCHAR(50),
+  	Revenue INT,
+    FOREIGN KEY (Team_ID) REFERENCES Teams (Team_ID) ON DELETE CASCADE
+);
+
+-- Insert data into tables
 INSERT INTO Racers (Race_Number, Name, Birthday, Team_ID, Total_Points, Start_Date, Contract_End, Instagram_following)
 Values
 (10, "Pierre Gasly", '1996-02-07', 1, 436.0, '2017-10-01', '2027-01-01', 5400000),
@@ -77,3 +95,7 @@ Values
 (9, "Oracle Red Bull Racing", NULL, 1, 22, 6, 12900000, NULL, NULL, NULL, NULL, NULL),
 (10, "Atlassian Williams Racing", NULL, 23, 55, 9, 4300000, NULL, NULL, NULL, NULL, NULL)
 ;
+
+
+
+

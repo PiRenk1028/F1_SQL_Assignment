@@ -55,3 +55,6 @@ Submit an ER (Entity-Relationship) diagram that visually represents your databas
 The diagram should support and provide evidence of the tables, relationships, and constraints you have implemented.
 You can submit the diagram as either an image or a PDF, as long as it clearly and neatly displays all the tables and their relationships.
 
+
+PROJECT FILE: https://docs.google.com/document/d/1IHXdPDJWYVxWRqSgwpB-pMulSBrprdsg07XLcwQQleI/edit?usp=sharing
+

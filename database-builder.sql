@@ -99,15 +99,15 @@ Values
 INSERT INTO Cars (Team_ID,Car_Name,Engine_Name,Fuel_Type)
 VALUES
 	(1,"Alpine A525","Renault E-Tech RE25","Eni"),
-	(2,"AMR25","Renault E-Tech RE25","Eni"),
-    (3,"Alpine A525","Renault E-Tech RE25","Eni"),
-    (4,"Alpine A525","Renault E-Tech RE25","Eni"),
-    (5,"Alpine A525","Renault E-Tech RE25","Eni"),
-    (6,"Alpine A525","Renault E-Tech RE25","Eni"),
-    (7,"Alpine A525","Renault E-Tech RE25","Eni"),
-    (8,"Alpine A525","Renault E-Tech RE25","Eni"),
-    (9,"Alpine A525","Renault E-Tech RE25","Eni"),
-    (10,"Alpine A525","Renault E-Tech RE25","Eni"),
+	(2,"AMR25","0","0"),
+    (3,"SF-25","0","0"),
+    (4,"VF-25","0","0"),
+    (5,"Kick Sauber C44","0","0"),
+    (6,"MCL39","0","0"),
+    (7,"F1 W16","0","0"),
+    (8,"VCARB02","0","0"),
+    (9,"RB21","0","0"),
+    (10,"FW47","0","0")
 ;
 
 

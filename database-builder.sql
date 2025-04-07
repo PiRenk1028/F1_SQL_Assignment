@@ -45,7 +45,7 @@ Create Table Drivers(
     
 
 CREATE TABLE Finances(
-	Team_ID SMALLINT,
+    Team_ID SMALLINT,
     Budget INT,
     Spending INT,
     CFO VARCHAR(50),

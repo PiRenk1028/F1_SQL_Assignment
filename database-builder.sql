@@ -63,9 +63,9 @@ CREATE TABLE Circuits(
     Location INT,
     Country SMALLINT,
     LAPS SMALLINT,
-    Length_of_Track SMALLINT,
-    Time_Zone SMALLINT,
-    Seating_Number SMALLINT
+    Length_of_Track INT,
+    Time_Zone INT,
+    Seating_Number INT
 );
 
 -- Insert data into tables

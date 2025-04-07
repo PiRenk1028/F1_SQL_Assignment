@@ -11,11 +11,6 @@ CREATE TABLE Cars(
     Fuel_Type VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE Sponsors(
-    Sponsor_ID SMALLINT PRIMARY KEY,
-    Sponsor_Name SMALLINT,
-    Funding INT
-);
 
 Create Table Teams(
     Team_ID SMALLINT PRIMARY KEY,
@@ -66,6 +61,12 @@ CREATE TABLE Circuits(
     Length_of_Track INT,
     Time_Zone INT,
     Seating_Number INT
+);
+
+CREATE TABLE Sponsors(
+    Sponsor_ID SMALLINT PRIMARY KEY,
+    Sponsor_Name SMALLINT,
+    Funding INT
 );
 
 -- Insert data into tables
@@ -152,4 +153,5 @@ Values(
 );
 
 --Sponsors
+
 

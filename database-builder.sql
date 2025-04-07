@@ -77,7 +77,7 @@ CREATE TABLE Circuits(
 );
 
 -- Insert data into tables
-INSERT INTO Racers (Race_Number, Name, Birthday, Team_ID, Total_Points, Start_Date, Contract_End, Instagram_following)
+INSERT INTO Drivers (Race_Number, Name, Birthday, Team_ID, Total_Points, Start_Date, Contract_End, Instagram_following)
 Values
 (10, "Pierre Gasly", '1996-02-07', 1, 436.0, '2017-10-01', '2027-01-01', 5400000),
 (7, "Jack Doohan", '2003-01-20', 1, 0.0, '2024-12-08', '2025-04-21', 441000),

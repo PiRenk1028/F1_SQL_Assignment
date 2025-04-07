@@ -69,7 +69,7 @@ CREATE TABLE Circuits(
     Circuit_ID SMALLINT PRIMARY KEY,
     Location INT,
     Country SMALLINT,
-    LAPS SMALLINT,
+    Laps SMALLINT,
     Length_of_Track SMALLINT,
     Time_Zone SMALLINT,
     Seating_Number SMALLINT
@@ -130,7 +130,7 @@ VALUES
 
 --Finances
 
-INSERT INTO Circuits
+INSERT INTO Circuits (Circuit_ID, Location, Country, Laps, Length_of_Track, Time_Zone,Seating_Number)
 Values(
 ('Australian GP', 'Albert Park Circuit', 'Australia', 58, '5.278 Kilometers', 'AEST', 125000),
 ('Chinese GP', 'Shanghai International Circuit', 'China', 56, '5.451 Kilometers', 'UTC+8', 200000),

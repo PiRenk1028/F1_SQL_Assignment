@@ -4,6 +4,38 @@ CREATE DATABASE F1;
 USE F1;
 
 -- Create tables
+CREATE TABLE Cars(
+    Car_ID SMALLINT PRIMARY KEY AUTO_INCREMENT,
+    Car_Name VARCHAR(50) NOT NULL,
+    Engine_Name VARCHAR(50) NOT NULL,
+    Fuel_Type VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Sponsors(
+	Sponsor_ID SMALLINT PRIMARY KEY,
+    Sponsor_Name SMALLINT,
+    Funding INT
+);
+
+Create Table Teams(
+    Team_ID SMALLINT PRIMARY KEY,
+    Team_Name VARCHAR(50),
+    Car_ID SMALLINT,
+    Total_Championships SMALLINT,
+    Intragram_following INT,
+    Sponsor_1 SMALLINT,
+    Sponsor_2 SMALLINT,
+    Sponsor_3 SMALLINT,
+    Sponsor_4 SMALLINT,
+    Sponsor_5 SMALLINT,
+    FOREIGN KEY (Car_ID) REFERENCES Cars(Car_ID) ON DELETE SET NULL,
+    FOREIGN KEY (Sponsor_1) REFERENCES Sponsors(Sponsor_ID) ON DELETE SET NULL,
+    FOREIGN KEY (Sponsor_2) REFERENCES Sponsors(Sponsor_ID) ON DELETE SET NULL,
+    FOREIGN KEY (Sponsor_3) REFERENCES Sponsors(Sponsor_ID) ON DELETE SET NULL,
+    FOREIGN KEY (Sponsor_4) REFERENCES Sponsors(Sponsor_ID) ON DELETE SET NULL,
+    FOREIGN KEY (Sponsor_5) REFERENCES Sponsors(Sponsor_ID) ON DELETE SET NULL
+    );
+    
 Create Table Drivers(
     Race_Number SMALLINT PRIMARY KEY,
     Name VARCHAR(30),
@@ -13,67 +45,27 @@ Create Table Drivers(
     Start_Date DATE,
     Contract_End DATE,
     Intragram_following BIGINT,
-    FOREIGN KEY (Team_ID) REFERENCES Teams (Team_ID) ON DELETE SET NULL
+    FOREIGN KEY (Team_ID) REFERENCES Teams(Team_ID) ON DELETE SET NULL
     );
     
-Create Table Teams(
-    Team_ID SMALLINT PRIMARY KEY,
-    Team_Name VARCHAR(50),
-    Car_ID SMALLINT,
-    Driver_1 SMALLINT ,
-    Driver_2 SMALLINT,
-    Total_Championships SMALLINT,
-    Intragram_following INT,
-    Sponsor_1 INT,
-    Sponsor_2 INT,
-    Sponsor_3 INT,
-    Sponsor_4 INT,
-    Sponsor_5 INT,
-    FOREIGN KEY (Car_ID) REFERENCES Cars (Car_ID) ON DELETE SET NULL,
-    FOREIGN KEY (Driver_1) REFERENCES Racers (Race_Number) ON DELETE SET NULL,
-    FOREIGN KEY (Driver_2) REFERENCES Racers (Race_Number) ON DELETE SET NULL,
-    FOREIGN KEY (Sponsor_1) REFERENCES Sponsors (Sponsor_ID) ON DELETE SET NULL,
-    FOREIGN KEY (Sponsor_2) REFERENCES Sponsors (Sponsor_ID) ON DELETE SET NULL,
-    FOREIGN KEY (Sponsor_3) REFERENCES Sponsors (Sponsor_ID) ON DELETE SET NULL,
-    FOREIGN KEY (Sponsor_4) REFERENCES Sponsors (Sponsor_ID) ON DELETE SET NULL,
-    FOREIGN KEY (Sponsor_5) REFERENCES Sponsors (Sponsor_ID) ON DELETE SET NULL
-    );
-    
-CREATE TABLE Cars(
-    Car_ID SMALLINT PRIMARY KEY AUTO_INCREMENT,
-    Team_ID SMALLINT,
-    Car_Name VARCHAR(50) NOT NULL,
-    Engine_Name VARCHAR(50) NOT NULL,
-    Fuel_Type VARCHAR(50) NOT NULL,
-    FOREIGN KEY (TeamID) REFERENCES Teams (Team_ID) ON DELETE SET NULL
-);
 
 CREATE TABLE Finances(
-    Team_ID SMALLINT NOT NULL,
+	Team_ID SMALLINT,
     Budget INT,
     Spending INT,
     CFO VARCHAR(50),
     Revenue INT,
-    FOREIGN KEY (Team_ID) REFERENCES Teams (Team_ID) ON DELETE CASCADE
-);
-
-CREATE TABLE Sponsors(
-    Sponsors_ID SMALLINT PRIMARY KEY,
-    Sponsor_Name INT,
-    Team_ID SMALLINT,
-    Funding INT,
-    FOREIGN KEY (Team_ID) REFERENCES Teams(Team_ID) on Delete set null
+    FOREIGN KEY (Team_ID) REFERENCES Teams(Team_ID) ON DELETE SET NULL
 );
 
 CREATE TABLE Circuits(
     Circuit_ID SMALLINT PRIMARY KEY,
-    Grand_Prix SMALLINT
     Location INT,
     Country SMALLINT,
-    Laps SMALLINT,
-    Length_of_Track INT,
+    LAPS SMALLINT,
+    Length_of_Track SMALLINT,
     Time_Zone SMALLINT,
-    Seating_Number INT
+    Seating_Number SMALLINT
 );
 
 -- Insert data into tables

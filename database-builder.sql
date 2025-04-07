@@ -59,7 +59,7 @@ CREATE TABLE Finances(
 
 CREATE TABLE Sponsors(
     Sponsors_ID SMALLINT PRIMARY KEY,
-    Sponsor_Name SMALLINT,
+    Sponsor_Name INT,
     Team_ID SMALLINT,
     Funding INT,
     FOREIGN KEY (Team_ID) REFERENCES Teams(Team_ID) on Delete set null
@@ -71,9 +71,9 @@ CREATE TABLE Circuits(
     Location INT,
     Country SMALLINT,
     Laps SMALLINT,
-    Length_of_Track SMALLINT,
+    Length_of_Track INT,
     Time_Zone SMALLINT,
-    Seating_Number SMALLINT
+    Seating_Number INT
 );
 
 -- Insert data into tables

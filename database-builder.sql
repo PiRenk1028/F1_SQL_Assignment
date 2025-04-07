@@ -67,6 +67,7 @@ CREATE TABLE Sponsors(
 
 CREATE TABLE Circuits(
     Circuit_ID SMALLINT PRIMARY KEY,
+    Grand_Prix SMALLINT
     Location INT,
     Country SMALLINT,
     Laps SMALLINT,
@@ -130,32 +131,32 @@ VALUES
 
 --Finances
 
-INSERT INTO Circuits (Circuit_ID, Location, Country, Laps, Length_of_Track, Time_Zone,Seating_Number)
+INSERT INTO Circuits (Circuit_ID, Grand_Prix, Location, Country, Laps, Length_of_Track, Time_Zone,Seating_Number)
 Values(
-('Australian GP', 'Albert Park Circuit', 'Australia', 58, '5.278 Kilometers', 'AEST', 125000),
-('Chinese GP', 'Shanghai International Circuit', 'China', 56, '5.451 Kilometers', 'UTC+8', 200000),
-('Japanese GP', 'Suzuka Circuit, Japan', 53, '5.807 Kilometers', 'JST', 155000),
-('Bahrain GP', 'Bahrain International Circuit', 'Bahrain', 57, '5.412 Kilometers', 'UTC+03:00', 70000),
-('Saudi Arabian GP', 'Jeddah Street Circuit', 'Saudi Arabia', 50, '6.174 Kilometers', 'UTC+03:00', 50000),
-('Miami GP', 'Miami International Autodrome', 'United States', 57, '5.412 Kilometers', 'UTC-5', 65000),
-('Imola GP', 'Autodromo Enzo E dino Ferrari', 'Italy', 63, '4.909 Kilometers' 'CET', 78000),
-('Monaco GP', 'Circuit De Monaco', 'Monaco', 78, '3.337 Kilometers', 'CET', 37000),
-('Spanish GP', 'Circuit De Catalunya', 'Spain', 66, '4.675 Kilometers', 'CET', 140700),
-('Canadian GP', 'Circuit Gilles Villeneuve', 'Canada', 70, '4.361 Kilometers', 'EDT', 100000),
-('Austrian GP', 'Red Bull Ring', 'Austria', 71, '4.318 Kilometers', 'CET', 105000),
-('British GP', 'Circuit Silverstone', 'Britain', 52, '5.891 Kilometers', 'GMT', 164000),
-('Belgian GP', 'Spa-Francorchamps', 'Belgum', 44, '7.004 Kilometers', 'CET', 70000),
-('Hungarian GP', 'Hungaroring', 'Hungary', 70, '4.381 Kilometers', 'CET', 70000),
-('Dutch GP', 'Circuit Zandvoort', 'Netherlands', 72, '4.259 Kilometers', 'CET', 105000),
-('Italian GP', 'Autodromo Nazionale Monza', 'Italy', 53, '5.793 Kilometers', 'CET', 118865),
-('Azerbaijan GP', 'Baku City Circuit', 'Azerbaijan', 51, '6.003 Kilometers', 'UTC+04:00', 18500),
-('Singapore GP', 'Marina Bay Street circuit', 'Singapore', 61, '5.063 Kilometers', 'SST', 90000),
-('United States GP', 'Circuit of the Americas', 'United States', 56, '5.513 Kilometers', 'UTC-6', 120000),
-('Mexican GP', 'Autodromo Hermanos Rodriguez', 'Mexico', 71, '4.304 Kilometers', 'UTC-6', 110000),
-('Brazilian GP', 'Autodromo Jose Carlose Pace Interlagos', 'Brazil', 71, '4.309 Kilometers', 'UTC-03:00', 60000),
-('Las Vegas GP', 'Las Vegas Street Circuit', 'United States', 50, '6.120 Kilometers', 'UTC-8', 100000),
-('Qatar GP', 'Losail International Circuit', 'Qatar', 57, '5.380 Kilometers', 'UTC+03:00', 52000),
-('Abu Dhabi GP', 'Yas Marina Circuit', 'United Arab Emirates', 58, '5.281 Kilometers', 'UTC+04:00', 60000)
+(1,'Australian GP', 'Albert Park Circuit', 'Australia', 58, '5.278 Kilometers', 'AEST', 125000),
+(2,'Chinese GP', 'Shanghai International Circuit', 'China', 56, '5.451 Kilometers', 'UTC+8', 200000),
+(3,'Japanese GP', 'Suzuka Circuit, Japan', 53, '5.807 Kilometers', 'JST', 155000),
+(4,'Bahrain GP', 'Bahrain International Circuit', 'Bahrain', 57, '5.412 Kilometers', 'UTC+03:00', 70000),
+(5,'Saudi Arabian GP', 'Jeddah Street Circuit', 'Saudi Arabia', 50, '6.174 Kilometers', 'UTC+03:00', 50000),
+(6,'Miami GP', 'Miami International Autodrome', 'United States', 57, '5.412 Kilometers', 'UTC-5', 65000),
+(7,'Imola GP', 'Autodromo Enzo E dino Ferrari', 'Italy', 63, '4.909 Kilometers' 'CET', 78000),
+(8,'Monaco GP', 'Circuit De Monaco', 'Monaco', 78, '3.337 Kilometers', 'CET', 37000),
+(9,'Spanish GP', 'Circuit De Catalunya', 'Spain', 66, '4.675 Kilometers', 'CET', 140700),
+(10,'Canadian GP', 'Circuit Gilles Villeneuve', 'Canada', 70, '4.361 Kilometers', 'EDT', 100000),
+(11,'Austrian GP', 'Red Bull Ring', 'Austria', 71, '4.318 Kilometers', 'CET', 105000),
+(12,'British GP', 'Circuit Silverstone', 'Britain', 52, '5.891 Kilometers', 'GMT', 164000),
+(13,'Belgian GP', 'Spa-Francorchamps', 'Belgum', 44, '7.004 Kilometers', 'CET', 70000),
+(14,'Hungarian GP', 'Hungaroring', 'Hungary', 70, '4.381 Kilometers', 'CET', 70000),
+(15,'Dutch GP', 'Circuit Zandvoort', 'Netherlands', 72, '4.259 Kilometers', 'CET', 105000),
+(16,'Italian GP', 'Autodromo Nazionale Monza', 'Italy', 53, '5.793 Kilometers', 'CET', 118865),
+(17,'Azerbaijan GP', 'Baku City Circuit', 'Azerbaijan', 51, '6.003 Kilometers', 'UTC+04:00', 18500),
+(18,'Singapore GP', 'Marina Bay Street circuit', 'Singapore', 61, '5.063 Kilometers', 'SST', 90000),
+(19,'United States GP', 'Circuit of the Americas', 'United States', 56, '5.513 Kilometers', 'UTC-6', 120000),
+(20,'Mexican GP', 'Autodromo Hermanos Rodriguez', 'Mexico', 71, '4.304 Kilometers', 'UTC-6', 110000),
+(21,'Brazilian GP', 'Autodromo Jose Carlose Pace Interlagos', 'Brazil', 71, '4.309 Kilometers', 'UTC-03:00', 60000),
+(22,'Las Vegas GP', 'Las Vegas Street Circuit', 'United States', 50, '6.120 Kilometers', 'UTC-8', 100000),
+(23,'Qatar GP', 'Losail International Circuit', 'Qatar', 57, '5.380 Kilometers', 'UTC+03:00', 52000),
+(24,'Abu Dhabi GP', 'Yas Marina Circuit', 'United Arab Emirates', 58, '5.281 Kilometers', 'UTC+04:00', 60000)
 );
 
 --Sponsors

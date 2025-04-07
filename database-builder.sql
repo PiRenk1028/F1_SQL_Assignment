@@ -4,14 +4,6 @@ CREATE DATABASE F1;
 USE F1;
 
 -- Create tables
-CREATE TABLE Cars(
-    Car_ID SMALLINT PRIMARY KEY AUTO_INCREMENT,
-    Car_Name VARCHAR(50) NOT NULL,
-    Engine_Name VARCHAR(50) NOT NULL,
-    Fuel_Type VARCHAR(50) NOT NULL
-);
-
-
 Create Table Teams(
     Team_ID SMALLINT PRIMARY KEY,
     Team_Name VARCHAR(50),
@@ -43,6 +35,16 @@ Create Table Drivers(
     FOREIGN KEY (Team_ID) REFERENCES Teams(Team_ID) ON DELETE SET NULL
     );
     
+CREATE TABLE Cars(
+    Car_ID SMALLINT PRIMARY KEY AUTO_INCREMENT,
+    Team_ID SMALLINT,
+    Car_Name VARCHAR(50) NOT NULL,
+    Car_Length INT NOT NULL,
+    Car_Height INT NOT NULL,
+    Car_Primary_Color VARCHAR(50) NOT NULL,
+    Car_Secondary_Color VARCHAR(50) NOT NULL,
+    FOREIGN KEY (TeamID) REFERENCES Teams (Team_ID) ON DELETE SET NULL
+);
 
 CREATE TABLE Finances(
     Team_ID SMALLINT,
@@ -108,21 +110,21 @@ Values
 (10, "Atlassian Williams Racing", 10, 9, 4300000, NULL, NULL, NULL, NULL, NULL)
 ;
 
-INSERT INTO Cars (Team_ID,Car_Name,Engine_Name,Fuel_Type)
+INSERT INTO Cars (Team_ID,Car_Name,Car_Length,Car_Height,Car_Primary_Color,Car_Secondary_Color)
 VALUES
-(1,"Alpine A525","Renault E-Tech RE25","Eni"),
-(2,"AMR25","0","0"),
-(3,"SF-25","0","0"),
-(4,"VF-25","0","0"),
-(5,"Kick Sauber C44","0","0"),
-(6,"MCL39","0","0"),
-(7,"F1 W16","0","0"),
-(8,"VCARB02","0","0"),
-(9,"RB21","0","0"),
-(10,"FW47","0","0")
+	(1,"Alpine A525",5620,950,"Blue","Pink"),
+	(2,"AMR25",5600,950,"Green","Black"),
+    (3,"SF-25",5580,950,"Red","Black"),
+    (4,"VF-25",5688,950,"White","Black"),
+    (5,"Kick Sauber C44",5640,970,"Neon Green","Black"),
+    (6,"MCL39",5630,900,"Orange","Black"),
+    (7,"F1 W16",5773,950,"Black","Teal"),
+    (8,"VCARB02",5000,950,"White","Red"),
+    (9,"RB21",5000,950,"Black","Yellow"),
+    (10,"FW47",5000,950,"Blue","Black")
 ;
 
---Finances
+-- Finances
 
 INSERT INTO Circuits (Circuit_ID, Grand_Prix, Location, Country, Laps, Length_of_Track, Time_Zone,Seating_Number)
 Values(
@@ -152,6 +154,6 @@ Values(
 (24,'Abu Dhabi GP', 'Yas Marina Circuit', 'United Arab Emirates', 58, '5.281 Kilometers', 'UTC+04:00', 60000)
 );
 
---Sponsors
+-- Sponsors
 
 

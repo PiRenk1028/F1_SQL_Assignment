@@ -84,30 +84,30 @@ Values
 
 INSERT INTO Teams (Team_ID, Team_Name, Car_ID, Driver_1, Driver_2, Total_Championships, Intragram_following, Sponsor_1, Sponsor_2, Sponsor_3, Sponsor_4, Sponsor_5 )
 Values
-(1, "BWT Alpine Formula One Team", NULL, 10, 7, 0, 4200000, NULL, NULL, NULL, NULL, NULL),
-(2, "Aston Martin Aramco Formula One Team", NULL, 18, 14, 0, 4800000, NULL, NULL, NULL, NULL, NULL),
-(3, "Scuderia Ferrari HP Formula One Team", NULL, 16, 44, 16, 17900000, NULL, NULL, NULL, NULL, NULL),
-(4, "MoneyGram Haas Formula One Team", NULL, 31, 87, 0, 3100000, NULL, NULL, NULL, NULL, NULL),
-(5, "Stake Formula One Team Kick Sauber", NULL, 27, 5, 0, 2800000, NULL, NULL, NULL, NULL, NULL),
-(6, "McLaren Formula One Team", NULL, 81, 4, 9, 14700000, NULL, NULL, NULL, NULL, NULL),
-(7, "Mercedes-AMG PETRONAS Formula One Team", NULL, 63, 12, 8, 14100000, NULL, NULL, NULL, NULL, NULL),
-(8, "Visa Cash App Racing Bulls Formula One Team", NULL, 6, 30, 0, 3300000, NULL, NULL, NULL, NULL, NULL),
-(9, "Oracle Red Bull Racing", NULL, 1, 22, 6, 12900000, NULL, NULL, NULL, NULL, NULL),
-(10, "Atlassian Williams Racing", NULL, 23, 55, 9, 4300000, NULL, NULL, NULL, NULL, NULL)
+(1, "BWT Alpine Formula One Team", 1, 10, 7, 0, 4200000, NULL, NULL, NULL, NULL, NULL),
+(2, "Aston Martin Aramco Formula One Team", 2, 18, 14, 0, 4800000, NULL, NULL, NULL, NULL, NULL),
+(3, "Scuderia Ferrari HP Formula One Team", 3, 16, 44, 16, 17900000, NULL, NULL, NULL, NULL, NULL),
+(4, "MoneyGram Haas Formula One Team", 4, 31, 87, 0, 3100000, NULL, NULL, NULL, NULL, NULL),
+(5, "Stake Formula One Team Kick Sauber", 5, 27, 5, 0, 2800000, NULL, NULL, NULL, NULL, NULL),
+(6, "McLaren Formula One Team", 6, 81, 4, 9, 14700000, NULL, NULL, NULL, NULL, NULL),
+(7, "Mercedes-AMG PETRONAS Formula One Team", 7, 63, 12, 8, 14100000, NULL, NULL, NULL, NULL, NULL),
+(8, "Visa Cash App Racing Bulls Formula One Team", 8, 6, 30, 0, 3300000, NULL, NULL, NULL, NULL, NULL),
+(9, "Oracle Red Bull Racing", 9, 1, 22, 6, 12900000, NULL, NULL, NULL, NULL, NULL),
+(10, "Atlassian Williams Racing", 10, 23, 55, 9, 4300000, NULL, NULL, NULL, NULL, NULL)
 ;
 
 INSERT INTO Cars (Team_ID,Car_Name,Engine_Name,Fuel_Type)
 VALUES
-	(1,"Alpine A525","Renault E-Tech RE25","Eni"),
-	(2,"AMR25","0","0"),
-    (3,"SF-25","0","0"),
-    (4,"VF-25","0","0"),
-    (5,"Kick Sauber C44","0","0"),
-    (6,"MCL39","0","0"),
-    (7,"F1 W16","0","0"),
-    (8,"VCARB02","0","0"),
-    (9,"RB21","0","0"),
-    (10,"FW47","0","0")
+(1,"Alpine A525","Renault E-Tech RE25","Eni"),
+(2,"AMR25","0","0"),
+(3,"SF-25","0","0"),
+(4,"VF-25","0","0"),
+(5,"Kick Sauber C44","0","0"),
+(6,"MCL39","0","0"),
+(7,"F1 W16","0","0"),
+(8,"VCARB02","0","0"),
+(9,"RB21","0","0"),
+(10,"FW47","0","0")
 ;
 
 

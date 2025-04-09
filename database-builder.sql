@@ -98,16 +98,16 @@ Values
 
 INSERT INTO Teams (Team_ID, Team_Name, Car_ID, Total_Championships, Intragram_following, Sponsor_1, Sponsor_2, Sponsor_3, Sponsor_4, Sponsor_5 )
 Values
-(1, "BWT Alpine Formula One Team", 1, 0, 4200000, NULL, NULL, NULL, NULL, NULL),
-(2, "Aston Martin Aramco Formula One Team", 2, 0, 4800000, NULL, NULL, NULL, NULL, NULL),
-(3, "Scuderia Ferrari HP Formula One Team", 3, 16, 17900000, NULL, NULL, NULL, NULL, NULL),
-(4, "MoneyGram Haas Formula One Team", 4, 0, 3100000, NULL, NULL, NULL, NULL, NULL),
-(5, "Stake Formula One Team Kick Sauber", 5, 0, 2800000, NULL, NULL, NULL, NULL, NULL),
-(6, "McLaren Formula One Team", 6, 9, 14700000, NULL, NULL, NULL, NULL, NULL),
-(7, "Mercedes-AMG PETRONAS Formula One Team", 7, 8, 14100000, NULL, NULL, NULL, NULL, NULL),
-(8, "Visa Cash App Racing Bulls Formula One Team", 8, 0, 3300000, NULL, NULL, NULL, NULL, NULL),
-(9, "Oracle Red Bull Racing", 9, 6, 12900000, NULL, NULL, NULL, NULL, NULL),
-(10, "Atlassian Williams Racing", 10, 9, 4300000, NULL, NULL, NULL, NULL, NULL)
+(1, "BWT Alpine Formula One Team", 1, 0, 4200000, 46, 47, 48, 49, 50),
+(2, "Aston Martin Aramco Formula One Team", 2, 0, 4800000, 31, 32, 33, 34, 35),
+(3, "Scuderia Ferrari HP Formula One Team", 3, 16, 17900000, 16, 17, 18, 19, 20),
+(4, "MoneyGram Haas Formula One Team", 4, 0, 3100000, 26, 27, 28, 29, 30),
+(5, "Stake Formula One Team Kick Sauber", 5, 0, 2800000, 41, 42, 43, 44, 45),
+(6, "McLaren Formula One Team", 6, 9, 14700000, 1, 2, 3, 4, 5),
+(7, "Mercedes-AMG PETRONAS Formula One Team", 7, 8, 14100000, 6, 7, 8, 9, 10),
+(8, "Visa Cash App Racing Bulls Formula One Team", 8, 0, 3300000, 36, 37, 38, 39, 40),
+(9, "Oracle Red Bull Racing", 9, 6, 12900000, 11, 12, 13, 14, 15),
+(10, "Atlassian Williams Racing", 10, 9, 4300000, 21, 22, 23, 24, 25)
 ;
 
 INSERT INTO Cars (Team_ID,Car_Name,Car_Length,Car_Height,Car_Primary_Color,Car_Secondary_Color)

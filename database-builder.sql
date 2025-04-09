@@ -57,16 +57,17 @@ CREATE TABLE Finances(
 
 CREATE TABLE Circuits(
     Circuit_ID SMALLINT PRIMARY KEY,
-    Location INT,
-    Country SMALLINT,
+    Location VARCHAR(50),
+    Country VARCHAR(50),
     LAPS SMALLINT,
-    Length_of_Track INT,
-    Time_Zone INT,
+    Length_of_Track VARCHAR(50),
+    Time_Zone VARCHAR(50),
     Seating_Number INT
 );
 
 CREATE TABLE Sponsors(
     Sponsor_ID SMALLINT PRIMARY KEY,
+    Sponsor_Team VARCHAR(50),
     Sponsor_Name SMALLINT,
     Funding INT
 );

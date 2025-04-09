@@ -67,8 +67,7 @@ CREATE TABLE Circuits(
 
 CREATE TABLE Sponsors(
     Sponsor_ID SMALLINT PRIMARY KEY,
-    Sponsor_Team VARCHAR(50),
-    Sponsor_Name SMALLINT,
+    Sponsor_Name VARCHAR(50),
     Funding INT
 );
 
@@ -128,7 +127,7 @@ VALUES
 -- Finances
 
 INSERT INTO Circuits (Circuit_ID, Grand_Prix, Location, Country, Laps, Length_of_Track, Time_Zone,Seating_Number)
-Values(
+Values
 (1,'Australian GP', 'Albert Park Circuit', 'Australia', 58, '5.278 Kilometers', 'AEST', 125000),
 (2,'Chinese GP', 'Shanghai International Circuit', 'China', 56, '5.451 Kilometers', 'UTC+8', 200000),
 (3,'Japanese GP', 'Suzuka Circuit, Japan', 53, '5.807 Kilometers', 'JST', 155000),
@@ -153,7 +152,62 @@ Values(
 (22,'Las Vegas GP', 'Las Vegas Street Circuit', 'United States', 50, '6.120 Kilometers', 'UTC-8', 100000),
 (23,'Qatar GP', 'Losail International Circuit', 'Qatar', 57, '5.380 Kilometers', 'UTC+03:00', 52000),
 (24,'Abu Dhabi GP', 'Yas Marina Circuit', 'United Arab Emirates', 58, '5.281 Kilometers', 'UTC+04:00', 60000)
-);
+;
+
+INSERT INTO Sponsors(Sponsor_ID, Sponsor_Name, Funding)
+VALUES
+(1, 'OKX', 25000000),
+(2, 'British American Tobacco', 30000000),
+(3, 'DP World', NULL),
+(4, 'Dell', 15000000),
+(5, 'Darktrace', 10000000),
+(6, 'Petronas', 65090000),
+(7, 'Ineos', NULL),
+(8, 'IWC', NULL),
+(9, 'Snapdragon', NULL),
+(10, 'TeamViewer', NULL),
+(11, 'Oracle', 300000000),
+(12, 'Bybit', 150000000),
+(13, 'Honda', 20000000),
+(14, 'ExxonMobil', NULL),
+(15, 'TAG Heuer', 150000000),
+(16, 'Santander', 60000000),
+(17, 'Shell', 27000000),
+(18, 'Virtual Gaming Worlds', NULL),
+(19, 'Genesys', 110000000),
+(20, 'HCL Technologies', NULL),
+(21, 'Duracell', NULL),
+(22, 'Gulf Oil', NULL),
+(23, 'Kraken', NULL),
+(24, 'PPG Industries', NULL),
+(25, 'Terra Virtua', NULL),
+(26, 'Moneygram', 20000000),
+(27, 'Haas Automation', NULL),
+(28, 'Palm Angels', NULL),
+(29, 'Schuberth', NULL),
+(30, 'Opensea', NULL),
+(31, 'Saudi Aramco', 150000000),
+(32, 'Cognizant', 35000000),
+(33, 'Citi', NULL),
+(34, 'Crypto.com', 100000000),
+(35, 'JCB', NULL),
+(36, 'Visa', 20000000),
+(37, 'Cash App', 20000000),
+(38, 'Mobil', NULL),
+(39, 'ExxonMobil', NULL),
+(40, 'Hugo', NULL),
+(41, 'Stake.com', NULL),
+(42, 'Alfa Romeo', 99400000),
+(43, 'AMX', NULL),
+(44, 'PUMA', NULL),
+(45, 'Globeair', NULL),
+(46, 'BWT', NULL),
+(47, 'Castrol', 218000000),
+(48, 'Binance', NULL),
+(49, 'Microsoft', NULL),
+(50, 'Kappa', NULL)
+;
+
 
 -- Sponsors
 

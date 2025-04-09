@@ -112,16 +112,16 @@ Values
 
 INSERT INTO Cars (Team_ID,Car_Name,Car_Length,Car_Height,Car_Primary_Color,Car_Secondary_Color)
 VALUES
-	(1,"Alpine A525",5620,950,"Blue","Pink"),
-	(2,"AMR25",5600,950,"Green","Black"),
-    (3,"SF-25",5580,950,"Red","Black"),
-    (4,"VF-25",5688,950,"White","Black"),
-    (5,"Kick Sauber C44",5640,970,"Neon Green","Black"),
-    (6,"MCL39",5630,900,"Orange","Black"),
-    (7,"F1 W16",5773,950,"Black","Teal"),
-    (8,"VCARB02",5000,950,"White","Red"),
-    (9,"RB21",5000,950,"Black","Yellow"),
-    (10,"FW47",5000,950,"Blue","Black")
+(1,"Alpine A525",5620,950,"Blue","Pink"),
+(2,"AMR25",5600,950,"Green","Black"),
+(3,"SF-25",5580,950,"Red","Black"),
+(4,"VF-25",5688,950,"White","Black"),
+(5,"Kick Sauber C44",5640,970,"Neon Green","Black"),
+(6,"MCL39",5630,900,"Orange","Black"),
+(7,"F1 W16",5773,950,"Black","Teal"),
+(8,"VCARB02",5000,950,"White","Red"),
+(9,"RB21",5000,950,"Black","Yellow"),
+(10,"FW47",5000,950,"Blue","Black")
 ;
 
 -- Finances

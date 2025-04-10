@@ -209,6 +209,5 @@ VALUES
 ;
 
 
--- Sponsors
 
 

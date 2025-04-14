@@ -47,7 +47,7 @@ CREATE TABLE Cars(
 );
 
 CREATE TABLE Finances(
-    Team_ID SMALLINT,
+    Team_ID SMALLINT PRIMARY KEY,
     Team_Principal VARCHAR(25),
     Valuation BIGINT,
     Driver_Salary_Totals BIGINT,

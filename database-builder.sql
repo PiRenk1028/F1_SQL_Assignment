@@ -48,10 +48,10 @@ CREATE TABLE Cars(
 
 CREATE TABLE Finances(
     Team_ID SMALLINT,
-    Budget INT,
-    Spending INT,
-    CFO VARCHAR(50),
-    Revenue INT,
+    Team_Principal VARCHAR(25),
+    Valuation BIGINT,
+    Driver_Salary_Totals BIGINT,
+    Revenue_2023 BIGINT,
     FOREIGN KEY (Team_ID) REFERENCES Teams(Team_ID) ON DELETE SET NULL
 );
 
@@ -124,7 +124,19 @@ VALUES
 (10,"FW47",5000,950,"Blue","Black")
 ;
 
--- Finances
+INSERT INTO Finances (Team_ID,Team_Principal,Valuation,Driver_Salary_Totals,Revenue_2023)
+Values
+(1,'Oliver Oakes',1500000000,11000000,311000000),
+(2,'Andy Cowell',2070000000,23000000,304000000),
+(3,'Fred Vasseur',4780000000,94000000,619000000),
+(4,'Ayao Komatsu',1020000000,8000000,184000000),
+(5,'Alessandro Alunni Bravi',1200000000,9000000,189000000),
+(6,'Andrea Stella',2650000000,26000000,536000000),
+(7,'Toto Wolff',3940000000,17000000,6000000),
+(8,'Laurent Mekies',1220000000,3000000,226000000),
+(9,'Christian Horner',3500000000,66000000,555000000),
+(10,'James Vowles',1240000000,23000000,158000000)
+;
 
 INSERT INTO Circuits (Circuit_ID, Grand_Prix, Location, Country, Laps, Length_of_Track, Time_Zone,Seating_Number)
 Values

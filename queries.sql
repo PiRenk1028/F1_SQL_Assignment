@@ -26,4 +26,5 @@ FROM Drivers
 WHERE NOT Total_Points = 0.0
 Order By Total_Points DESC;
 -- display driver info order by the highest point vaule that is not 0
+
 -- Aylssa Query 

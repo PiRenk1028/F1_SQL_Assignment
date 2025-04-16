@@ -28,3 +28,8 @@ Order By Total_Points DESC;
 -- Display driver info order by the highest point vaule that is not 0
 
 -- Aylssa Query 
+SELECT circuit_id, Location , SUM(laps) AS total_laps
+FROM circuits
+GROUP BY circuit_id
+HAVING total_laps > 50;
+-- Showcases Which circuits that have greater risk of crashes due to increased amount of turns

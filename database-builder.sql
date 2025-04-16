@@ -17,7 +17,7 @@ Create Table Drivers(
     Race_Number SMALLINT PRIMARY KEY,
     Name VARCHAR(30),
     Birthday DATE,
-    Total_Points DEC,
+    Total_Points DECIMAL(10,1),
     Start_Date DATE,
     Contract_End DATE,
     Intragram_following BIGINT
